@@ -300,39 +300,77 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ── SERVICES ────────────────────────────────────────────────────── */
-.services-grid {
+.services-list {
+  margin-top: clamp(40px, 5vw, 64px);
+  border-top: 1px solid var(--border);
+}
+.service-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 52px 1fr 1.8fr;
+  gap: clamp(20px, 4vw, 56px);
+  padding: clamp(36px, 5vw, 60px) 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  padding-left: 20px;
+  transition: background 0.2s var(--ease);
 }
-.service-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: clamp(36px, 4.5vw, 60px);
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+.service-row::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.25s var(--ease);
 }
-.service-card:hover {
-  border-color: rgba(0, 230, 118, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px var(--accent-glow);
+.service-row:hover::before { opacity: 1; }
+.service-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+  padding-top: 6px;
 }
-.service-icon {
-  width: 60px;
-  height: 60px;
-  color: var(--accent);
-  margin-bottom: 28px;
-}
-.service-card h3 {
+.service-left h3 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(20px, 2.2vw, 26px);
   font-weight: 700;
-  margin-bottom: 14px;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
-.service-card p {
+.service-hook {
+  font-size: clamp(13px, 1.3vw, 15px);
+  color: var(--accent);
+  font-style: italic;
+  line-height: 1.5;
+}
+.service-right p {
   font-size: clamp(14px, 1.5vw, 16px);
   color: var(--text-2);
   line-height: 1.8;
+  margin-bottom: 20px;
+}
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.service-tags span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  padding: 4px 11px;
+  border-radius: 100px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.service-row:hover .service-tags span {
+  color: var(--accent);
+  border-color: rgba(0, 230, 118, 0.3);
 }
 
 /* ── TEAM ────────────────────────────────────────────────────────── */
@@ -859,13 +897,20 @@ footer {
   .footer-right { text-align: left; }
 }
 
+@media (max-width: 860px) {
+  .service-row { grid-template-columns: 48px 1fr; }
+  .service-right { grid-column: 2; }
+}
+
 @media (max-width: 720px) {
   .team-grid    { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   .credits-grid { columns: 2; }
 }
 
 @media (max-width: 600px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .service-row { grid-template-columns: 1fr; padding-left: 0; }
+  .service-row::before { display: none; }
+  .service-num { display: none; }
   .listen-grid   { grid-template-columns: 1fr; }
   .form-row      { grid-template-columns: 1fr; }
   .footer-nav    { display: none; }
