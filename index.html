@@ -17,12 +17,18 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">SONNOS<span class="accent">.</span></a>
       <ul class="nav-links" role="list">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#credits">Credits</a></li>
-        <li><a href="#listen">Listen</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+        <li><a href="#team"     data-i18n="nav-team">Team</a></li>
+        <li><a href="#credits"  data-i18n="nav-credits">Credits</a></li>
+        <li><a href="#listen"   data-i18n="nav-listen">Listen</a></li>
+        <li><a href="#contact"  data-i18n="nav-contact">Contact</a></li>
       </ul>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ca">CA</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -31,24 +37,24 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul role="list">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#credits">Credits</a></li>
-      <li><a href="#listen">Listen</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#services" data-i18n="nav-services">Services</a></li>
+      <li><a href="#team"     data-i18n="nav-team">Team</a></li>
+      <li><a href="#credits"  data-i18n="nav-credits">Credits</a></li>
+      <li><a href="#listen"   data-i18n="nav-listen">Listen</a></li>
+      <li><a href="#contact"  data-i18n="nav-contact">Contact</a></li>
     </ul>
   </div>
 
   <!-- ─── HERO ───────────────────────────────────────────────────── -->
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Music &amp; Sound Design Studio</p>
+      <p class="hero-eyebrow" data-i18n="hero-eyebrow">Music &amp; Sound Design Studio</p>
       <h1 class="hero-name">SONNOS<span class="accent">.</span></h1>
-      <p class="hero-subtitle">Music and sound that shapes worlds.</p>
-      <p class="hero-desc">If it moves on screen, it should move through sound.<br>Games, series and cinematic media.</p>
+      <p class="hero-subtitle" data-i18n="hero-subtitle">Music and sound that shapes worlds.</p>
+      <p class="hero-desc" data-i18n="hero-desc">If it moves on screen, it should move through sound.<br>Games, series and cinematic media.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Let's talk</a>
-        <a href="#listen"  class="btn-ghost">Listen</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero-cta1">Let's talk</a>
+        <a href="#listen"  class="btn-ghost"   data-i18n="hero-cta2">Listen</a>
       </div>
     </div>
     <div class="waveform-container" id="waveform" aria-hidden="true"></div>
@@ -58,8 +64,8 @@
   <section id="services" class="section">
     <div class="container">
       <div class="section-header">
-        <h2>We work where<br>sound matters.</h2>
-        <p>From interactive worlds to cinematic storytelling, we design sound that supports emotion, rhythm and narrative.</p>
+        <h2 data-i18n="svc-h2">We work where<br>sound matters.</h2>
+        <p data-i18n="svc-p">From interactive worlds to cinematic storytelling, we design sound that supports emotion, rhythm and narrative.</p>
       </div>
       <div class="services-grid">
 
@@ -71,8 +77,8 @@
               <circle cx="18" cy="16" r="3"/>
             </svg>
           </div>
-          <h3>Bespoke Music</h3>
-          <p>Original scores and soundtracks for games, series, film and live ceremonies. From orchestral composition to electronic production, built around your story, not ours.</p>
+          <h3 data-i18n="svc-music-h3">Bespoke Music</h3>
+          <p  data-i18n="svc-music-p">Original scores and soundtracks for games, series, film and live ceremonies. From orchestral composition to electronic production, built around your story, not ours.</p>
         </div>
 
         <div class="service-card">
@@ -81,8 +87,8 @@
               <polyline points="2,12 5,6 8,16 11,8 14,14 17,4 20,12 22,12"/>
             </svg>
           </div>
-          <h3>Bespoke Sound Design</h3>
-          <p>Custom SFX, ambients and sonic atmospheres built from scratch. From the quietest texture to the hardest impact. Every sound placed with intention.</p>
+          <h3 data-i18n="svc-sound-h3">Bespoke Sound Design</h3>
+          <p  data-i18n="svc-sound-p">Custom SFX, ambients and sonic atmospheres built from scratch. From the quietest texture to the hardest impact. Every sound placed with intention.</p>
         </div>
 
         <div class="service-card">
@@ -93,8 +99,8 @@
               <path d="M3  19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
             </svg>
           </div>
-          <h3>Audio for Interactive Media</h3>
-          <p>Adaptive music and dynamic sound systems built for games. We've worked with studios reaching over 2 billion players. We know how audio drives engagement at scale.</p>
+          <h3 data-i18n="svc-interactive-h3">Audio for Interactive Media</h3>
+          <p  data-i18n="svc-interactive-p">Adaptive music and dynamic sound systems built for games. We've worked with studios reaching over 2 billion players. We know how audio drives engagement at scale.</p>
         </div>
 
         <div class="service-card">
@@ -108,8 +114,8 @@
               <circle cx="10" cy="18" r="2.2" fill="currentColor" stroke="none"/>
             </svg>
           </div>
-          <h3>Post, Mix &amp; Voice Over</h3>
-          <p>Final mix, mastering and VO production in up to 12 languages. Dialogue editing, restoration, casting and delivery, ready for broadcast, streaming or theatrical release.</p>
+          <h3 data-i18n="svc-post-h3">Post, Mix &amp; Voice Over</h3>
+          <p  data-i18n="svc-post-p">Final mix, mastering and VO production in up to 12 languages. Dialogue editing, restoration, casting and delivery, ready for broadcast, streaming or theatrical release.</p>
         </div>
 
       </div>
@@ -120,8 +126,8 @@
   <section id="team" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <h2>The Team</h2>
-        <p>We collaborate with developers, directors and producers who understand that sound is not decoration. It's structure.</p>
+        <h2 data-i18n="team-h2">The Team</h2>
+        <p  data-i18n="team-p">We collaborate with developers, directors and producers who understand that sound is not decoration. It's structure.</p>
       </div>
       <div class="team-grid">
 
@@ -134,8 +140,8 @@
           </div>
           <div class="team-info">
             <h3 class="team-name">Pere Revert <a href="https://www.linkedin.com/in/pererevert/" class="team-linkedin" target="_blank" rel="noopener" aria-label="Pere Revert on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></h3>
-            <p class="team-roles">Producer · Sound Designer · Mixing &amp; Mastering</p>
-            <p class="team-bio">Founder of Sonnos (2010). Over 15 years delivering bespoke audio for games, TV series and cinematic media. Credits include Raid: Shadow Legends, MoMonsters (RTVE) and the opening ceremony of the Games of the Small States of Europe.</p>
+            <p class="team-roles" data-i18n="pere-roles">Producer · Sound Designer · Mixing &amp; Mastering</p>
+            <p class="team-bio"   data-i18n="pere-bio">Founder of Sonnos (2010). Over 15 years delivering bespoke audio for games, TV series and cinematic media. Credits include Raid: Shadow Legends, MoMonsters (RTVE) and the opening ceremony of the Games of the Small States of Europe.</p>
           </div>
         </div>
 
@@ -145,8 +151,8 @@
           </div>
           <div class="team-info">
             <h3 class="team-name">Carlos Lozano <a href="https://www.linkedin.com/in/carlos-lozano-quintanilla-01920b102/" class="team-linkedin" target="_blank" rel="noopener" aria-label="Carlos Lozano on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></h3>
-            <p class="team-roles">Composer · Guitarist · Producer</p>
-            <p class="team-bio">Composer and guitarist at Sonnos since 2010. Lead guitarist in Persefone, with 3 European tours, 2 Asian tours and 5 worldwide albums. Also teaches guitar, composition and harmony at Relative Music School.</p>
+            <p class="team-roles" data-i18n="carlos-roles">Composer · Guitarist · Producer</p>
+            <p class="team-bio"   data-i18n="carlos-bio">Composer and guitarist at Sonnos since 2010. Lead guitarist in Persefone, with 3 European tours, 2 Asian tours and 5 worldwide albums. Also teaches guitar, composition and harmony at Relative Music School.</p>
           </div>
         </div>
 
@@ -156,8 +162,8 @@
           </div>
           <div class="team-info">
             <h3 class="team-name">Miguel 'Moe' Espinosa <a href="https://www.linkedin.com/in/miguelespinosacomposer/" class="team-linkedin" target="_blank" rel="noopener" aria-label="Miguel Espinosa on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></h3>
-            <p class="team-roles">Composer · Producer · Keys &amp; Vocals</p>
-            <p class="team-bio">Berklee-trained composer specialising in film scoring and orchestral work. Keys and vocals in Persefone. Credits include the Nick OST (dir. José Pozo), Wolves, and the Stargate SG-1 Ep.2 OST for MGM.</p>
+            <p class="team-roles" data-i18n="miguel-roles">Composer · Producer · Keys &amp; Vocals</p>
+            <p class="team-bio"   data-i18n="miguel-bio">Berklee-trained composer specialising in film scoring and orchestral work. Keys and vocals in Persefone. Credits include the Nick OST (dir. José Pozo), Wolves, and the Stargate SG-1 Ep.2 OST for MGM.</p>
           </div>
         </div>
 
@@ -169,8 +175,8 @@
   <section id="credits" class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Credits</h2>
-        <p>Click any project to learn more about the work.</p>
+        <h2 data-i18n="credits-h2">Credits</h2>
+        <p  data-i18n="credits-p">Click any project to learn more about the work.</p>
       </div>
       <div class="credits-grid">
 
@@ -794,8 +800,8 @@
   <section id="listen" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <h2>Listen</h2>
-        <p>Sound work across music, design and interactive media.</p>
+        <h2 data-i18n="listen-h2">Listen</h2>
+        <p  data-i18n="listen-p">Sound work across music, design and interactive media.</p>
       </div>
       <div class="listen-grid">
 
@@ -911,8 +917,8 @@
       <div class="contact-grid">
 
         <div class="contact-info">
-          <h2>Let's talk and build<br>your project together.</h2>
-          <p class="contact-tagline">We work where sound matters.</p>
+          <h2 data-i18n="contact-h2">Let's talk and build<br>your project together.</h2>
+          <p class="contact-tagline" data-i18n="contact-tagline">We work where sound matters.</p>
           <div class="contact-socials">
             <a href="https://www.facebook.com/sonnosaudioservices/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -951,44 +957,44 @@
               method="POST">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name" data-i18n="form-name">Name</label>
               <input type="text"  id="name"  name="name"  required autocomplete="name">
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="form-email">Email</label>
               <input type="email" id="email" name="email" required autocomplete="email">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="project-type">Project Type</label>
+              <label for="project-type" data-i18n="form-type">Project Type</label>
               <select id="project-type" name="project_type">
-                <option value="">Select type...</option>
-                <option value="game">Video Game</option>
-                <option value="series">TV Series</option>
-                <option value="film">Film / Documentary</option>
-                <option value="trailer">Trailer / Ad</option>
-                <option value="interactive">Interactive Media</option>
-                <option value="other">Other</option>
+                <option value=""          data-i18n="opt-type-0">Select type...</option>
+                <option value="game"      data-i18n="opt-type-1">Video Game</option>
+                <option value="series"    data-i18n="opt-type-2">TV Series</option>
+                <option value="film"      data-i18n="opt-type-3">Film / Documentary</option>
+                <option value="trailer"   data-i18n="opt-type-4">Trailer / Ad</option>
+                <option value="interactive" data-i18n="opt-type-5">Interactive Media</option>
+                <option value="other"     data-i18n="opt-type-6">Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="budget">Estimated Budget</label>
+              <label for="budget" data-i18n="form-budget">Estimated Budget</label>
               <select id="budget" name="budget">
-                <option value="">Select range...</option>
-                <option value="under-1k">Under €1,000</option>
-                <option value="1k-5k">€1,000 – €5,000</option>
-                <option value="5k-15k">€5,000 – €15,000</option>
-                <option value="15k-plus">€15,000+</option>
-                <option value="discuss">Let's discuss</option>
+                <option value=""         data-i18n="opt-budget-0">Select range...</option>
+                <option value="under-1k" data-i18n="opt-budget-1">Under €1,000</option>
+                <option value="1k-5k"    data-i18n="opt-budget-2">€1,000 – €5,000</option>
+                <option value="5k-15k"   data-i18n="opt-budget-3">€5,000 – €15,000</option>
+                <option value="15k-plus" data-i18n="opt-budget-4">€15,000+</option>
+                <option value="discuss"  data-i18n="opt-budget-5">Let's discuss</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label for="message">Tell us about your project</label>
+            <label for="message" data-i18n="form-message">Tell us about your project</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-full">Send message</button>
+          <button type="submit" class="btn-primary btn-full" data-i18n="form-submit">Send message</button>
         </form>
 
       </div>
@@ -1000,14 +1006,14 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <span class="footer-logo">SONNOS<span class="accent">.</span></span>
-        <p class="footer-tagline">Music &amp; Sound Design · Games, Series &amp; Cinematic Media</p>
+        <p class="footer-tagline" data-i18n="footer-tagline">Music &amp; Sound Design · Games, Series &amp; Cinematic Media</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#credits">Credits</a>
-        <a href="#listen">Listen</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-i18n="nav-services">Services</a>
+        <a href="#team"     data-i18n="nav-team">Team</a>
+        <a href="#credits"  data-i18n="nav-credits">Credits</a>
+        <a href="#listen"   data-i18n="nav-listen">Listen</a>
+        <a href="#contact"  data-i18n="nav-contact">Contact</a>
       </nav>
       <div class="footer-right">
         <p class="footer-copy">&copy; <span id="year"></span> Sonnos</p>
