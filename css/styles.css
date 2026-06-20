@@ -564,6 +564,31 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .listen-embed { line-height: 0; }
 .listen-embed iframe { width: 100%; display: block; }
 
+.listen-video {
+  width: 100%;
+  display: block;
+  max-height: 280px;
+  object-fit: cover;
+  background: #000;
+}
+
+.listen-audio-wrap {
+  height: clamp(180px, 20vw, 260px);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1;
+}
+.listen-audio {
+  width: 88%;
+  accent-color: var(--accent);
+}
+.listen-audio-icon { line-height: 0; }
+
 .listen-placeholder {
   height: clamp(180px, 20vw, 260px);
   background: var(--bg);
